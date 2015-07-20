@@ -32,13 +32,13 @@ function start() {
     fi
 
     # Starting with -detached doesn't give us a pid file...
-    "$bindir/rabbitmq-server" 2>&1 &
+    #"$bindir/rabbitmq-server" 2>&1 &
     
-    if ! "$bindir/rabbitmqctl" wait "$RABBITMQ_PID_FILE"
-    then
-        client_error "Error waiting for RabbitMQ server to start"
-        return 1
-    fi
+    #if ! "$bindir/rabbitmqctl" wait "$RABBITMQ_PID_FILE"
+    #then
+    #    client_error "Error waiting for RabbitMQ server to start"
+    #    return 1
+    #fi
 
     return 0
 }
